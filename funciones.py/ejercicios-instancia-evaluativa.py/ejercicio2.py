@@ -1,20 +1,24 @@
-# Escribir una función que convierta un número decimal en los otros dos sistemas: Binario y Hexadecimal. Mostrar mensajes pertenecientes a cada función.
-def dec_a_bin(decimal):
-    binario = bin(decimal)
-    return binario
+#Realizar un programa de funciones que contengan funciones con bucles y control de flujo fuera de la función decoradora. Al menos se deben tener dos condicionales o bucles.
 
-def dec_a_hexa(decimal):
-    hexadecimal = hex(decimal)
-    return hexadecimal
+def es_par(numero):
+    return numero % 2 == 0
 
-def procedimiento():
-    decimal = int(input("Ingresar número decimal: "))
+def calcular_factorial(numero):
+    factorial = 1
+    for i in range(1, numero + 1):
+        factorial = factorial * i
+    return factorial
 
-    binario = dec_a_bin(decimal)
-    print("El número en binario es:", binario)
+numero = int(input("Ingrese un número entero: "))
 
-    hexadecimal = dec_a_hexa(decimal)
-    print("El número en hexadecimal es:", hexadecimal)
+if es_par(numero):
+    print(str(numero) + " es un número par.")
+else:
+    print(str(numero) + " es un número impar.")
 
-procedimiento()
+if numero >= 0:
+    factorial = calcular_factorial(numero)
+    print("El factorial de " + str(numero) + " es " + str(factorial) + ".")
+else:
+    print("No se puede calcular el factorial de un número negativo.")
 #----------------------#
